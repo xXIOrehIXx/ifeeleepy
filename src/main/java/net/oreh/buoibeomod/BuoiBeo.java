@@ -13,6 +13,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.oreh.buoibeomod.block.ModBlocks;
 import net.oreh.buoibeomod.item.ModItems;
 
 import org.apache.logging.log4j.LogManager;
@@ -32,7 +33,7 @@ public class BuoiBeo {
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ModItems.register(eventBus);
-
+		ModBlocks.register(eventBus);
 		// Register ourselves for server and other game events we are interested in
 		MinecraftForge.EVENT_BUS.register(this);
 	}
