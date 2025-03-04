@@ -12,7 +12,7 @@ public class ModItems {
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BuoiBeo.MOD_ID);
 
 	public static final RegistryObject<Item> BUOIBEO = ITEMS.register("buoibeo",
-			() -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+			() -> new Item(new Item.Properties().tab(ModCreativeModTab.BUOIBEO_TAB)));
 
 	public static void register(IEventBus evenbus) {
 		ITEMS.register(evenbus);
