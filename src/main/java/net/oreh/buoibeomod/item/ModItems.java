@@ -14,6 +14,9 @@ public class ModItems {
 	public static final RegistryObject<Item> BUOIBEO = ITEMS.register("buoibeo",
 			() -> new Item(new Item.Properties().tab(ModCreativeModTab.BUOIBEO_TAB)));
 
+	public static final RegistryObject<Item> BUOIBE = ITEMS.register("buoibe",
+			() -> new Item(new Item.Properties().tab(ModCreativeModTab.BUOIBEO_TAB)));
+	
 	public static void register(IEventBus evenbus) {
 		ITEMS.register(evenbus);
 	}

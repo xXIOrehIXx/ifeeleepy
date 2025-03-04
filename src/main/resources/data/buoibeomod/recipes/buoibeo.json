@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"###",
+		"###",
+		"S S"
+	],
+	"key": {
+		"#": {
+			"item": "buoibeomod:buoi_block"
+		},
+		"S": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "buoibeomod:buoibeo"
+	}
+}

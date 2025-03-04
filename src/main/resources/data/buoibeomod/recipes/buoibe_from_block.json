@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "buoibeomod:buoi_block"
+    }
+  ],
+  "result": {
+    "item": "buoibeomod:buoibe",
+    "count": 9
+  }
+}
