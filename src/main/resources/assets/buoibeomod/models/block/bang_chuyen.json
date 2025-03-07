@@ -4,7 +4,7 @@
 	"textures": {
 		"0": "buoibeomod:block/bang_chuyen_side",
 		"1": "buoibeomod:block/bang_chuyen_top",
-		"particle": "buoibeomod:bang_chuyen_side"
+		"particle": "buoibeomod:block/bang_chuyen_side"
 	},
 	"elements": [
 		{

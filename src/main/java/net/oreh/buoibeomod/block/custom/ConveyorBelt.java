@@ -5,6 +5,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.SlabType;
+import net.minecraft.world.level.material.Fluid;
 
 public class ConveyorBelt extends SlabBlock {
 
@@ -55,13 +57,18 @@ public class ConveyorBelt extends SlabBlock {
 	    }
 	    return super.canBeReplaced(state, context);
 	}
+	
+	@Override
+	public boolean canPlaceLiquid(BlockGetter pLevel, BlockPos pPos, BlockState pState, Fluid pFluid) {
+		return false;
+	}
 
 	private void moveEntity(Direction direction, Entity entity, double speed) {
 		switch (direction) {
-		case NORTH -> entity.push(0, 0, -speed);
-		case SOUTH -> entity.push(0, 0, speed);
-		case WEST -> entity.push(-speed, 0, 0);
-		case EAST -> entity.push(speed, 0, 0);
+		case NORTH -> entity.push(0, 0, speed);
+		case SOUTH -> entity.push(0, 0, -speed);
+		case WEST -> entity.push(speed, 0, 0);
+		case EAST -> entity.push(-speed, 0, 0);
 		default -> throw new IllegalArgumentException("Unexpected value: " + direction);
 		}
 
