@@ -1,0 +1,19 @@
+{
+	"variants": {
+		"facing=north": {
+			"model": "buoibeomod:block/bang_chuyen",
+			"y": 270
+		},
+		"facing=south": {
+			"model": "buoibeomod:block/bang_chuyen",
+			"y": 90
+		},
+		"facing=east": {
+			"model": "buoibeomod:block/bang_chuyen"
+		},
+		"facing=west": {
+			"model": "buoibeomod:block/bang_chuyen",
+			"y": 180
+		}
+	}
+}
